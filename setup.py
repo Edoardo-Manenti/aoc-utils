@@ -6,21 +6,21 @@ with codecs.open('README.rst', encoding='utf-8') as f:
     long_description = f.read().encode('ascii', 'ignore').decode('ascii')
 
 setup(
-    name='aoc-to-markdown',
+    name='aoc-utils',
     version='0.2.3',
     description='Parses Advent Of Code problem statement to markdown with option to also download the input while '
                 'keeping everything organised',
     long_description=long_description,
-    python_requires=">=3.*",
+    python_requires=">=3.6",
     install_requires=['beautifulsoup4', 'requests'],
-    py_modules=['aoc_to_markdown'],
+    py_modules=['aoc_utils'],
     entry_points={
-        'console_scripts': ['aoc-to-markdown=aoc_to_markdown:main']
+        'console_scripts': ['aoc-utils=aoc_utils:main']
     },
-    url='https://github.com/antonio-ramadas/aoc-to-markdown',
+    url='https://github.com/Edoardo-Manenti/aoc-utils',
     license='MIT',
-    author='António Ramadas',
-    author_email='antonio_ramadas@hotmail.com',
+    author='Edoardo Manenti',
+    author_email='edoardomanenti99@gmail.com',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',

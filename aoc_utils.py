@@ -1,11 +1,9 @@
 import os
 import re
 import sys
+import shutil
 from datetime import datetime
-from distutils.errors import DistutilsFileError
-from distutils.file_util import copy_file
 from getopt import getopt, GetoptError
-from distutils.dir_util import copy_tree
 
 import requests
 from bs4 import BeautifulSoup
@@ -110,10 +108,7 @@ def write(directory, content):
 
 
 def copy(src, dst):
-    try:
-        copy_tree(src, dst, update=True)
-    except DistutilsFileError:
-        copy_file(src, dst, update=True)
+    shutil.copytree(src, dst, dirs_exist_ok=True)
 
 
 def print_usage():
