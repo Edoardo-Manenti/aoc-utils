@@ -8,10 +8,10 @@ with codecs.open('README.rst', encoding='utf-8') as f:
 setup(
     name='aoc-utils',
     version='0.2.3',
-    description='Parses Advent Of Code problem statement to markdown with option to also download the input while '
-                'keeping everything organised',
+    description='Set of utils to speed up the resolution of the AOC ' + 
+                'problems while keeping everything organised',
     long_description=long_description,
-    python_requires=">=3.6",
+    python_requires=">=3.10",
     install_requires=['beautifulsoup4', 'requests'],
     py_modules=['aoc_utils'],
     entry_points={
